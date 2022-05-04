@@ -11,10 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-<<<<<<< HEAD
 from decouple import config
-=======
->>>>>>> 9acdc578e8e7bef905ce555b1616f0efe002294a
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -46,11 +43,7 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'order',
-<<<<<<< HEAD
-    'account',
-=======
->>>>>>> 9acdc578e8e7bef905ce555b1616f0efe002294a
-
+    'account'
 ]
 
 MIDDLEWARE = [
@@ -76,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -91,13 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'shop',
-<<<<<<< HEAD
-        'USER': 'nastya',
-        'PASSWORD': '1',
-=======
         'USER': 'shop_admin',
         'PASSWORD': 'shop_psw123',
->>>>>>> 9acdc578e8e7bef905ce555b1616f0efe002294a
         'HOST': 'localhost',
         'PORT': 5432
     }
